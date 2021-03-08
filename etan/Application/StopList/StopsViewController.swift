@@ -56,7 +56,7 @@ class StopsViewController: UIViewController, UISearchBarDelegate {
             DispatchQueue.main.async {
                 self.errorMessageLabel.text = viewModel.errorMessage
                 self.errorMessageLabel.isHidden = false
-                self.toggleLoadingIndicator(active: false)
+                self.toggleLoadingIndicator(indicator: activityIndicator, active: false)
             }
         }
         viewModel.reloadTableViewClosure = { [self] () in
@@ -78,28 +78,14 @@ class StopsViewController: UIViewController, UISearchBarDelegate {
             DispatchQueue.main.async {
                 let isLoading = self.viewModel.isLoading
                 if isLoading {
-                    self.toggleLoadingIndicator(active: true)
-                    self.toggleTableViewVisibility(visible: false)
+                    self.toggleLoadingIndicator(indicator: self.activityIndicator, active: true)
+                    self.toggleTableViewVisibility(tableView: self.stopsListView, visible: false)
                 } else {
-                    self.toggleLoadingIndicator(active: false)
-                    self.toggleTableViewVisibility(visible: true)
+                    self.toggleLoadingIndicator(indicator: self.activityIndicator, active: false)
+                    self.toggleTableViewVisibility(tableView: self.stopsListView, visible: true)
                 }
             }
         }
-    }
-    
-    func toggleLoadingIndicator(active: Bool = false) {
-        active
-            ? self.activityIndicator.startAnimating()
-            : self.activityIndicator.stopAnimating()
-        self.activityIndicator.isHidden = !active
-    }
-    
-    
-    func toggleTableViewVisibility(visible: Bool = false) {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.stopsListView.isHidden = !visible
-        })
     }
     
     func fetchData() {

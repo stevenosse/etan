@@ -13,6 +13,7 @@
 		6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919334C25F64DA400339E08 /* FavoriteListRepository.swift */; };
 		6919335225F6686B00339E08 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335125F6686B00339E08 /* FavoritesListViewModel.swift */; };
 		6919335825F672F000339E08 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335725F672EF00339E08 /* Dialog.swift */; };
+		6919336225F6805400339E08 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919336125F6805400339E08 /* UIViewControllerExtension.swift */; };
 		6939E7D525F028B9003D4C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D425F028B9003D4C83 /* AppDelegate.swift */; };
 		6939E7D725F028B9003D4C83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D625F028B9003D4C83 /* SceneDelegate.swift */; };
 		6939E7DE25F028BA003D4C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6939E7DD25F028BA003D4C83 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		6919334C25F64DA400339E08 /* FavoriteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRepository.swift; sourceTree = "<group>"; };
 		6919335125F6686B00339E08 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		6919335725F672EF00339E08 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		6919336125F6805400339E08 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		6939E7D125F028B9003D4C83 /* etan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6939E7D425F028B9003D4C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6939E7D625F028B9003D4C83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 				6919335725F672EF00339E08 /* Dialog.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		6919336025F6800000339E08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6919336125F6805400339E08 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6939E7C825F028B9003D4C83 = {
@@ -354,6 +364,7 @@
 		69A0D15825F24590001B365E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6919336025F6800000339E08 /* Extensions */,
 				6919335625F672E500339E08 /* Shared */,
 				69A0D14925F24014001B365E /* Services */,
 				69A0D15925F245A3001B365E /* Constants.swift */,
@@ -629,6 +640,7 @@
 			files = (
 				693D08AC25F22FC500F3501E /* StopListViewModel.swift in Sources */,
 				6919334325F63A1B00339E08 /* etan.xcdatamodeld in Sources */,
+				6919336225F6805400339E08 /* UIViewControllerExtension.swift in Sources */,
 				69AC2C4C25F263CF00994E60 /* BaseViewModel.swift in Sources */,
 				6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */,
 				69A0D15A25F245A3001B365E /* Constants.swift in Sources */,

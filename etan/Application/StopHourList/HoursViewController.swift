@@ -38,7 +38,7 @@ class HoursViewController: UIViewController {
             DispatchQueue.main.async {
                 self.errorMessageLabel.text = viewModel?.errorMessage
                 self.errorMessageLabel.isHidden = false
-                self.toggleLoadingIndicator(active: false)
+                self.toggleLoadingIndicator(indicator: self.activityIndicator, active: false)
             }
         }
         
@@ -48,7 +48,7 @@ class HoursViewController: UIViewController {
                 
                 if self.viewModel?.hourList.count == 0 {
                     self.noDataLabel.isHidden = false
-                    toggleTableViewVisibility(visible: false)
+                    toggleTableViewVisibility(tableView: self.hoursListView, visible: false)
                 } else {
                     self.noDataLabel.isHidden = true
                     self.hoursListView.reloadData()
@@ -60,29 +60,14 @@ class HoursViewController: UIViewController {
             DispatchQueue.main.async {
                 let isLoading = self.viewModel?.isLoading
                 if isLoading! {
-                    self.toggleLoadingIndicator(active: true)
-                    self.toggleTableViewVisibility(visible: false)
+                    self.toggleLoadingIndicator(indicator: self.activityIndicator, active: true)
+                    self.toggleTableViewVisibility(tableView: self.hoursListView, visible: false)
                 } else {
-                    self.toggleLoadingIndicator(active: false)
-                    self.toggleTableViewVisibility(visible: true)
+                    self.toggleLoadingIndicator(indicator: self.activityIndicator, active: false)
+                    self.toggleTableViewVisibility(tableView: self.hoursListView, visible: true)
                 }
             }
         }
-    }
-    
-    
-    func toggleLoadingIndicator(active: Bool = false) {
-        active
-            ? self.activityIndicator.startAnimating()
-            : self.activityIndicator.stopAnimating()
-        self.activityIndicator.isHidden = !active
-    }
-    
-    
-    func toggleTableViewVisibility(visible: Bool = false) {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.hoursListView.isHidden = !visible
-        })
     }
     
     func fetchData() {
