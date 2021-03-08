@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class Constants {
+    static let apiBaseUrl: String = "http://open_preprod.tan.fr/ewp"
+    
+    static let favoriteEntityName: String = "Favorite"
+}

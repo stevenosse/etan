@@ -21,54 +21,44 @@
                         <rect key="frame" x="10" y="26.5" width="22.5" height="21.5"/>
                         <color key="tintColor" systemColor="labelColor"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-43-fUu">
-                        <rect key="frame" x="40" y="0.0" width="270" height="75"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-qS-saD">
-                                <rect key="frame" x="0.0" y="10" width="270" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-M1-aNc">
-                                <rect key="frame" x="0.0" y="24.5" width="270" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="TC6-M1-aNc" firstAttribute="top" secondItem="yIS-qS-saD" secondAttribute="bottom" constant="10" id="6zD-rd-TGm"/>
-                            <constraint firstItem="yIS-qS-saD" firstAttribute="top" secondItem="DNM-43-fUu" secondAttribute="top" constant="10" id="GZe-Ej-YSb"/>
-                            <constraint firstAttribute="bottom" secondItem="TC6-M1-aNc" secondAttribute="bottom" constant="30" id="hpR-IC-Wkn"/>
-                            <constraint firstItem="yIS-qS-saD" firstAttribute="leading" secondItem="DNM-43-fUu" secondAttribute="leading" id="wsB-71-zgt"/>
-                        </constraints>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9k-7W-gsL">
+                        <rect key="frame" x="42.5" y="27" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-EB-zPH">
+                        <rect key="frame" x="297.5" y="2" width="12.5" height="71.5"/>
+                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MVB-EB-zPH" secondAttribute="trailing" constant="10" id="Fm4-ty-XHt"/>
                     <constraint firstItem="MyC-LF-Cbl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NB6-2T-W1J"/>
-                    <constraint firstItem="DNM-43-fUu" firstAttribute="leading" secondItem="MyC-LF-Cbl" secondAttribute="leading" constant="30" id="NFS-JW-etH"/>
-                    <constraint firstItem="DNM-43-fUu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZfA-fc-NW1"/>
-                    <constraint firstItem="DNM-43-fUu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iZh-v4-J50"/>
+                    <constraint firstItem="r9k-7W-gsL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PBB-pX-bgW"/>
+                    <constraint firstItem="MVB-EB-zPH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bGO-s6-6xT"/>
+                    <constraint firstAttribute="bottom" secondItem="MVB-EB-zPH" secondAttribute="bottom" id="nfh-1K-l5c"/>
+                    <constraint firstItem="r9k-7W-gsL" firstAttribute="leading" secondItem="MyC-LF-Cbl" secondAttribute="trailing" constant="10" id="wD8-Oh-2iV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <constraints>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="DNM-43-fUu" secondAttribute="trailing" constant="10" id="2GX-PK-3Jx"/>
-                <constraint firstItem="DNM-43-fUu" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="4Wm-7Z-ccd"/>
                 <constraint firstItem="MyC-LF-Cbl" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="Nsw-BH-LmM"/>
             </constraints>
             <connections>
-                <outlet property="lineDirectionLabel" destination="TC6-M1-aNc" id="3oF-Zk-S47"/>
-                <outlet property="lineNameLabel" destination="yIS-qS-saD" id="rjG-rq-g5K"/>
+                <outlet property="lineNameLabel" destination="r9k-7W-gsL" id="eV9-dN-XnW"/>
             </connections>
             <point key="canvasLocation" x="15.942028985507248" y="86.71875"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bus" catalog="system" width="128" height="122"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -8,10 +8,6 @@
 import Foundation
 
 struct Stop: Codable {
-    let codeLieu, libelle, distance: String
+    let codeLieu, libelle, distance: String?
     let ligne: [Ligne]
-}
-
-struct Ligne: Codable {
-    let numLigne: String
 }

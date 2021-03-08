@@ -9,7 +9,16 @@ import UIKit
 
 class StopsViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var stopsListView: UITableView!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var noDataLabel: UILabel!
+    
+    let searchController = UISearchController(searchResultsController: nil)
+
+    lazy var viewModel: StopListViewModel = {
+        return StopListViewModel()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,46 +27,100 @@ class StopsViewController: UIViewController, UISearchBarDelegate {
         
         self.navigationController?.navigationBar.barTintColor = .white
         
+        self.errorMessageLabel.isHidden = true
+        self.noDataLabel.isHidden = true
+        
         setupSearchBar()
         setupTableView()
+        setupViewModel()
+        fetchData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchStop(label: searchText)
     }
     
     func setupSearchBar() {
         searchBar.delegate = self
+        self.navigationItem.searchController = searchController
     }
     
     func setupTableView() {
         self.stopsListView.delegate = self
         self.stopsListView.dataSource = self
     }
+    
+    // MARK: - Setup viewModel
+    func setupViewModel() {
+        viewModel.errorLoadingDataClosure = { [self, viewModel] () in
+            DispatchQueue.main.async {
+                self.errorMessageLabel.text = viewModel.errorMessage
+                self.errorMessageLabel.isHidden = false
+                self.toggleLoadingIndicator(active: false)
+            }
+        }
+        viewModel.reloadTableViewClosure = { [self] () in
+            DispatchQueue.main.async {
+                self.errorMessageLabel.isHidden = true
+                
+                if self.viewModel.stopCount == 0 {
+                    self.noDataLabel.isHidden = false
+                    self.stopsListView.isHidden = true
+                } else {
+                    self.noDataLabel.isHidden = true
+                    self.stopsListView.isHidden = false
+                    self.stopsListView.reloadData()
+                }
+                
+            }
+        }
+        viewModel.updateLoadingStatusClosure = { [self] () in
+            DispatchQueue.main.async {
+                let isLoading = self.viewModel.isLoading
+                if isLoading {
+                    self.toggleLoadingIndicator(active: true)
+                    self.toggleTableViewVisibility(visible: false)
+                } else {
+                    self.toggleLoadingIndicator(active: false)
+                    self.toggleTableViewVisibility(visible: true)
+                }
+            }
+        }
+    }
+    
+    func toggleLoadingIndicator(active: Bool = false) {
+        active
+            ? self.activityIndicator.startAnimating()
+            : self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = !active
+    }
+    
+    
+    func toggleTableViewVisibility(visible: Bool = false) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.stopsListView.isHidden = !visible
+        })
+    }
+    
+    func fetchData() {
+        self.viewModel.getStopList()
+    }
 }
 
+// MARK: - Table view Delegate
 extension StopsViewController : UITableViewDelegate {
     
 }
 
+// MARK: - Table view data source
 extension StopsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TODO: move this to it component
         let cell = Bundle.main.loadNibNamed("StopItem", owner: self, options: nil)?.first as! StopItem
-        cell.stopNameLabel.text = "Angevinière"
-        cell.distanceLabel.text = "500m"
+        cell.stopNameLabel.text = "\(viewModel.stopList?[indexPath.row].libelle ?? "Aucun libelle")"
+        cell.distanceLabel.text = "N\\A"
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let hoursAction = _buildImportantAction(at: indexPath.row)
-        return UISwipeActionsConfiguration(actions: [hoursAction])
-    }
-    
-    func _buildImportantAction(at: Int) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "Pr. Horaires") {
-            (action, view, completer) in
-            // TODO: provide stop info
-            self.navigationController?.pushViewController(HoursViewController(), animated: true)
-        }
-        
-        return action
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -65,26 +128,41 @@ extension StopsViewController : UITableViewDataSource {
         return "Tous les arrêts"
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-
-        if let view = view as? UITableViewHeaderFooterView {
-            view.backgroundView?.backgroundColor = .white
-            view.textLabel?.backgroundColor = .clear
-            view.textLabel?.textColor = .black
-        }
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 65
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(StopDetailsViewController(stopName: "Angevinière"), animated: true)
+        let viewModel: StopDetailsViewModel = StopDetailsViewModel(stop: self.viewModel.stopList?[indexPath.row])
+        let stopDetailsVC = StopDetailsViewController(stopName: viewModel.stopName)
+        stopDetailsVC.configure(viewModel: viewModel)
+        self.navigationController?.pushViewController(stopDetailsVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: false)
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.viewModel.stopCount
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let addToFavoritesAction = UIContextualAction(style: .normal, title: "Ajouter au favoris") { [self]
+            (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            
+            let savedStatus = self.viewModel.saveStopToFavorites(stop: self.viewModel.stopList?[indexPath.row])
+            if savedStatus {
+                Dialog.showMessage(message: "L'arrêt a été ajouté à vos favoris avec succès.", title: "Succès", parent: self)
+            } else {
+                Dialog.showMessage(message: "L'arrêt n'a pas pu être ajouté à vos favoris (ou y est déjà).", title: "Erreur", parent: self)
+            }
+            success(true)
+        }
+        addToFavoritesAction.backgroundColor = .systemBlue
+        return UISwipeActionsConfiguration(actions: [addToFavoritesAction])
     }
     
     

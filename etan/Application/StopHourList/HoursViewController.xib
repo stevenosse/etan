@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HoursViewController" customModule="etan" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="O7X-a4-CU5" id="ngY-st-hwJ"/>
+                <outlet property="errorMessageLabel" destination="uF1-Mv-YZZ" id="mME-1K-9df"/>
                 <outlet property="hoursListView" destination="M9r-1u-1Qf" id="fLu-Vf-pwb"/>
+                <outlet property="noDataLabel" destination="mUB-di-1Ri" id="znD-4A-lb5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,14 +26,35 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="O7X-a4-CU5">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF1-Mv-YZZ">
+                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun horaire disponible." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-di-1Ri">
+                    <rect key="frame" x="110.5" y="437.5" width="193" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="M9r-1u-1Qf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Af-Rn-pwQ"/>
                 <constraint firstItem="M9r-1u-1Qf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6TG-HQ-c1e"/>
+                <constraint firstItem="O7X-a4-CU5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Bds-il-ISE"/>
+                <constraint firstItem="O7X-a4-CU5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="COE-xp-VLt"/>
+                <constraint firstItem="mUB-di-1Ri" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ibt-8c-Fky"/>
+                <constraint firstItem="uF1-Mv-YZZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OSB-nP-S3k"/>
+                <constraint firstItem="mUB-di-1Ri" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aJo-hi-nQe"/>
                 <constraint firstItem="M9r-1u-1Qf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fWx-63-JMh"/>
                 <constraint firstItem="M9r-1u-1Qf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="haP-c3-5Qp"/>
+                <constraint firstItem="uF1-Mv-YZZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hkF-kN-5Sl"/>
             </constraints>
             <point key="canvasLocation" x="16" y="77"/>
         </view>

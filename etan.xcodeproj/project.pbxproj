@@ -3,18 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236CCFED602D0B695D71BFEC /* Pods_etanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125332ABAB46D0FC68C88458 /* Pods_etanTests.framework */; };
+		6919334325F63A1B00339E08 /* etan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6919334125F63A1B00339E08 /* etan.xcdatamodeld */; };
+		6919334825F63B3300339E08 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919334725F63B3300339E08 /* StorageService.swift */; };
+		6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919334C25F64DA400339E08 /* FavoriteListRepository.swift */; };
+		6919335225F6686B00339E08 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335125F6686B00339E08 /* FavoritesListViewModel.swift */; };
+		6919335825F672F000339E08 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335725F672EF00339E08 /* Dialog.swift */; };
 		6939E7D525F028B9003D4C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D425F028B9003D4C83 /* AppDelegate.swift */; };
 		6939E7D725F028B9003D4C83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D625F028B9003D4C83 /* SceneDelegate.swift */; };
-		6939E7D925F028B9003D4C83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D825F028B9003D4C83 /* ViewController.swift */; };
-		6939E7DC25F028B9003D4C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6939E7DA25F028B9003D4C83 /* Main.storyboard */; };
 		6939E7DE25F028BA003D4C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6939E7DD25F028BA003D4C83 /* Assets.xcassets */; };
 		6939E7E125F028BA003D4C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6939E7DF25F028BA003D4C83 /* LaunchScreen.storyboard */; };
 		6939E7EC25F028BB003D4C83 /* etanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7EB25F028BB003D4C83 /* etanTests.swift */; };
 		6939E7F725F028BB003D4C83 /* etanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7F625F028BB003D4C83 /* etanUITests.swift */; };
+		6939E82525F03D34003D4C83 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E82325F03D34003D4C83 /* LoadingViewController.swift */; };
+		6939E82625F03D34003D4C83 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6939E82425F03D34003D4C83 /* LoadingViewController.xib */; };
+		6939E84125F03FC6003D4C83 /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E83F25F03FC6003D4C83 /* StopsViewController.swift */; };
+		6939E84225F03FC6003D4C83 /* StopsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6939E84025F03FC6003D4C83 /* StopsViewController.xib */; };
+		693D086B25F13D4B00F3501E /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D086925F13D4B00F3501E /* HoursViewController.swift */; };
+		693D086C25F13D4B00F3501E /* HoursViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693D086A25F13D4B00F3501E /* HoursViewController.xib */; };
+		693D088325F1418000F3501E /* HourItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D088125F1418000F3501E /* HourItem.swift */; };
+		693D088425F1418000F3501E /* HourItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693D088225F1418000F3501E /* HourItem.xib */; };
+		693D089D25F22D2B00F3501E /* LineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D089C25F22D2B00F3501E /* LineType.swift */; };
+		693D08A225F22DB100F3501E /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D08A125F22DB100F3501E /* ColorCode.swift */; };
+		693D08A725F22F5000F3501E /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D08A625F22F5000F3501E /* Hour.swift */; };
+		693D08AC25F22FC500F3501E /* StopListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D08AB25F22FC500F3501E /* StopListViewModel.swift */; };
+		6969BD6525F0449E008CB1AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969BD6325F0449E008CB1AB /* MainViewController.swift */; };
+		6969BD6F25F045AF008CB1AB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969BD6D25F045AF008CB1AB /* FavoritesViewController.swift */; };
+		6969BD7025F045AF008CB1AB /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6969BD6E25F045AF008CB1AB /* FavoritesViewController.xib */; };
+		6969BD7625F04AC0008CB1AB /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969BD7525F04AC0008CB1AB /* Stop.swift */; };
+		6969BD8225F0C9CC008CB1AB /* StopDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969BD8025F0C9CC008CB1AB /* StopDetailsViewController.swift */; };
+		6969BD8325F0C9CC008CB1AB /* StopDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6969BD8125F0C9CC008CB1AB /* StopDetailsViewController.xib */; };
+		6969BD9125F0DD13008CB1AB /* StopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969BD8F25F0DD13008CB1AB /* StopItem.swift */; };
+		6969BD9225F0DD13008CB1AB /* StopItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6969BD9025F0DD13008CB1AB /* StopItem.xib */; };
+		69A0D14B25F24039001B365E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0D14A25F24039001B365E /* NetworkService.swift */; };
+		69A0D15A25F245A3001B365E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0D15925F245A3001B365E /* Constants.swift */; };
+		69AC2C3925F2528A00994E60 /* Ligne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C3825F2528A00994E60 /* Ligne.swift */; };
+		69AC2C4725F263A500994E60 /* StopDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C4625F263A500994E60 /* StopDetailsViewModel.swift */; };
+		69AC2C4C25F263CF00994E60 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C4B25F263CF00994E60 /* BaseViewModel.swift */; };
+		69AC2C5625F265F900994E60 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C5525F265F900994E60 /* BaseRepository.swift */; };
+		69AC2C5E25F26D5C00994E60 /* HoursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C5D25F26D5C00994E60 /* HoursViewModel.swift */; };
+		69AC2C6325F26EDE00994E60 /* HourListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC2C6225F26EDE00994E60 /* HourListRepository.swift */; };
+		69E5AF1A25F2365D00F4103E /* StopListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5AF1925F2365D00F4103E /* StopListRepository.swift */; };
+		69E7B64C25F12094003F028E /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7B64A25F12094003F028E /* LineItem.swift */; };
+		69E7B64D25F12094003F028E /* LineItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E7B64B25F12094003F028E /* LineItem.xib */; };
+		8625DC1C19795CCB33748E39 /* Pods_etan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EDB42FD98AC1F4D0833EC4 /* Pods_etan.framework */; };
+		DDAA44E8FD391AC33E4F7E53 /* Pods_etan_etanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19216EECE51FDCC7DC529860 /* Pods_etan_etanUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +72,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04F361A7A790B70BE4AEA952 /* Pods-etan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etan.release.xcconfig"; path = "Target Support Files/Pods-etan/Pods-etan.release.xcconfig"; sourceTree = "<group>"; };
+		125332ABAB46D0FC68C88458 /* Pods_etanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19216EECE51FDCC7DC529860 /* Pods_etan_etanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etan_etanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6919334225F63A1B00339E08 /* etan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = etan.xcdatamodel; sourceTree = "<group>"; };
+		6919334725F63B3300339E08 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		6919334C25F64DA400339E08 /* FavoriteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRepository.swift; sourceTree = "<group>"; };
+		6919335125F6686B00339E08 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
+		6919335725F672EF00339E08 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		6939E7D125F028B9003D4C83 /* etan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6939E7D425F028B9003D4C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6939E7D625F028B9003D4C83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6939E7D825F028B9003D4C83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6939E7DB25F028B9003D4C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6939E7DD25F028BA003D4C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6939E7E025F028BA003D4C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6939E7E225F028BA003D4C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +92,43 @@
 		6939E7F225F028BB003D4C83 /* etanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = etanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6939E7F625F028BB003D4C83 /* etanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etanUITests.swift; sourceTree = "<group>"; };
 		6939E7F825F028BB003D4C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6939E82325F03D34003D4C83 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		6939E82425F03D34003D4C83 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		6939E83F25F03FC6003D4C83 /* StopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
+		6939E84025F03FC6003D4C83 /* StopsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopsViewController.xib; sourceTree = "<group>"; };
+		693D086925F13D4B00F3501E /* HoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursViewController.swift; sourceTree = "<group>"; };
+		693D086A25F13D4B00F3501E /* HoursViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoursViewController.xib; sourceTree = "<group>"; };
+		693D088125F1418000F3501E /* HourItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourItem.swift; sourceTree = "<group>"; };
+		693D088225F1418000F3501E /* HourItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourItem.xib; sourceTree = "<group>"; };
+		693D089C25F22D2B00F3501E /* LineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineType.swift; sourceTree = "<group>"; };
+		693D08A125F22DB100F3501E /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
+		693D08A625F22F5000F3501E /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		693D08AB25F22FC500F3501E /* StopListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopListViewModel.swift; sourceTree = "<group>"; };
+		6969BD6325F0449E008CB1AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6969BD6D25F045AF008CB1AB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		6969BD6E25F045AF008CB1AB /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		6969BD7525F04AC0008CB1AB /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		6969BD8025F0C9CC008CB1AB /* StopDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailsViewController.swift; sourceTree = "<group>"; };
+		6969BD8125F0C9CC008CB1AB /* StopDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopDetailsViewController.xib; sourceTree = "<group>"; };
+		6969BD8F25F0DD13008CB1AB /* StopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopItem.swift; sourceTree = "<group>"; };
+		6969BD9025F0DD13008CB1AB /* StopItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopItem.xib; sourceTree = "<group>"; };
+		69A0D14A25F24039001B365E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		69A0D15925F245A3001B365E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		69AC2C3825F2528A00994E60 /* Ligne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ligne.swift; sourceTree = "<group>"; };
+		69AC2C4625F263A500994E60 /* StopDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailsViewModel.swift; sourceTree = "<group>"; };
+		69AC2C4B25F263CF00994E60 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		69AC2C5525F265F900994E60 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		69AC2C5D25F26D5C00994E60 /* HoursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursViewModel.swift; sourceTree = "<group>"; };
+		69AC2C6225F26EDE00994E60 /* HourListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourListRepository.swift; sourceTree = "<group>"; };
+		69E5AF1925F2365D00F4103E /* StopListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopListRepository.swift; sourceTree = "<group>"; };
+		69E7B64A25F12094003F028E /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		69E7B64B25F12094003F028E /* LineItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineItem.xib; sourceTree = "<group>"; };
+		805E1DB9D2B3D8092D0375A5 /* Pods-etan-etanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etan-etanUITests.release.xcconfig"; path = "Target Support Files/Pods-etan-etanUITests/Pods-etan-etanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A161A2CF9CBAE3AE06BE523E /* Pods-etan-etanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etan-etanUITests.debug.xcconfig"; path = "Target Support Files/Pods-etan-etanUITests/Pods-etan-etanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDD91933F9D604A1DBC55A06 /* Pods-etanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etanTests.release.xcconfig"; path = "Target Support Files/Pods-etanTests/Pods-etanTests.release.xcconfig"; sourceTree = "<group>"; };
+		D55C20810FECCAC7BB56C6C1 /* Pods-etan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etan.debug.xcconfig"; path = "Target Support Files/Pods-etan/Pods-etan.debug.xcconfig"; sourceTree = "<group>"; };
+		E3EDB42FD98AC1F4D0833EC4 /* Pods_etan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF4C314DDB4EE0C29FD32416 /* Pods-etanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etanTests.debug.xcconfig"; path = "Target Support Files/Pods-etanTests/Pods-etanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8625DC1C19795CCB33748E39 /* Pods_etan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236CCFED602D0B695D71BFEC /* Pods_etanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +152,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDAA44E8FD391AC33E4F7E53 /* Pods_etan_etanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DEA574327B3E0DA26311A23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D55C20810FECCAC7BB56C6C1 /* Pods-etan.debug.xcconfig */,
+				04F361A7A790B70BE4AEA952 /* Pods-etan.release.xcconfig */,
+				A161A2CF9CBAE3AE06BE523E /* Pods-etan-etanUITests.debug.xcconfig */,
+				805E1DB9D2B3D8092D0375A5 /* Pods-etan-etanUITests.release.xcconfig */,
+				FF4C314DDB4EE0C29FD32416 /* Pods-etanTests.debug.xcconfig */,
+				BDD91933F9D604A1DBC55A06 /* Pods-etanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6919335625F672E500339E08 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6919335725F672EF00339E08 /* Dialog.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		6939E7C825F028B9003D4C83 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +187,8 @@
 				6939E7EA25F028BB003D4C83 /* etanTests */,
 				6939E7F525F028BB003D4C83 /* etanUITests */,
 				6939E7D225F028B9003D4C83 /* Products */,
+				1DEA574327B3E0DA26311A23 /* Pods */,
+				E6206A13255879493078E11E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +205,14 @@
 		6939E7D325F028B9003D4C83 /* etan */ = {
 			isa = PBXGroup;
 			children = (
-				6939E7D425F028B9003D4C83 /* AppDelegate.swift */,
+				69A0D15825F24590001B365E /* Resources */,
+				693D088D25F22A6600F3501E /* Application */,
+				6969BD7425F04AB1008CB1AB /* Models */,
 				6939E7D625F028B9003D4C83 /* SceneDelegate.swift */,
-				6939E7D825F028B9003D4C83 /* ViewController.swift */,
-				6939E7DA25F028B9003D4C83 /* Main.storyboard */,
 				6939E7DD25F028BA003D4C83 /* Assets.xcassets */,
 				6939E7DF25F028BA003D4C83 /* LaunchScreen.storyboard */,
 				6939E7E225F028BA003D4C83 /* Info.plist */,
+				6919334125F63A1B00339E08 /* etan.xcdatamodeld */,
 			);
 			path = etan;
 			sourceTree = "<group>";
@@ -128,6 +235,153 @@
 			path = etanUITests;
 			sourceTree = "<group>";
 		};
+		6939E82A25F03DB6003D4C83 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6939E7D425F028B9003D4C83 /* AppDelegate.swift */,
+				6969BD6325F0449E008CB1AB /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		693D087025F13E2000F3501E /* HourItem */ = {
+			isa = PBXGroup;
+			children = (
+				693D088125F1418000F3501E /* HourItem.swift */,
+				693D088225F1418000F3501E /* HourItem.xib */,
+			);
+			path = HourItem;
+			sourceTree = "<group>";
+		};
+		693D088D25F22A6600F3501E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6939E82A25F03DB6003D4C83 /* Main */,
+				693D089225F22B0400F3501E /* LoadingView */,
+				693D089125F22AF300F3501E /* StopDetails */,
+				693D089025F22AC900F3501E /* StopHourList */,
+				693D088F25F22AB100F3501E /* FavoriteList */,
+				693D088E25F22A8C00F3501E /* StopList */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		693D088E25F22A8C00F3501E /* StopList */ = {
+			isa = PBXGroup;
+			children = (
+				6969BD8E25F0DCD5008CB1AB /* StopItem */,
+				6939E83F25F03FC6003D4C83 /* StopsViewController.swift */,
+				6939E84025F03FC6003D4C83 /* StopsViewController.xib */,
+				693D08AB25F22FC500F3501E /* StopListViewModel.swift */,
+				69E5AF1925F2365D00F4103E /* StopListRepository.swift */,
+			);
+			path = StopList;
+			sourceTree = "<group>";
+		};
+		693D088F25F22AB100F3501E /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				6969BD6D25F045AF008CB1AB /* FavoritesViewController.swift */,
+				6969BD6E25F045AF008CB1AB /* FavoritesViewController.xib */,
+				6919334C25F64DA400339E08 /* FavoriteListRepository.swift */,
+				6919335125F6686B00339E08 /* FavoritesListViewModel.swift */,
+			);
+			path = FavoriteList;
+			sourceTree = "<group>";
+		};
+		693D089025F22AC900F3501E /* StopHourList */ = {
+			isa = PBXGroup;
+			children = (
+				693D087025F13E2000F3501E /* HourItem */,
+				693D086925F13D4B00F3501E /* HoursViewController.swift */,
+				693D086A25F13D4B00F3501E /* HoursViewController.xib */,
+				69AC2C5D25F26D5C00994E60 /* HoursViewModel.swift */,
+				69AC2C6225F26EDE00994E60 /* HourListRepository.swift */,
+			);
+			path = StopHourList;
+			sourceTree = "<group>";
+		};
+		693D089125F22AF300F3501E /* StopDetails */ = {
+			isa = PBXGroup;
+			children = (
+				69E7B64925F1207B003F028E /* LineItem */,
+				6969BD8025F0C9CC008CB1AB /* StopDetailsViewController.swift */,
+				6969BD8125F0C9CC008CB1AB /* StopDetailsViewController.xib */,
+				69AC2C4625F263A500994E60 /* StopDetailsViewModel.swift */,
+			);
+			path = StopDetails;
+			sourceTree = "<group>";
+		};
+		693D089225F22B0400F3501E /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				6939E82325F03D34003D4C83 /* LoadingViewController.swift */,
+				6939E82425F03D34003D4C83 /* LoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		6969BD7425F04AB1008CB1AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6969BD7525F04AC0008CB1AB /* Stop.swift */,
+				693D089C25F22D2B00F3501E /* LineType.swift */,
+				693D08A125F22DB100F3501E /* ColorCode.swift */,
+				693D08A625F22F5000F3501E /* Hour.swift */,
+				69AC2C3825F2528A00994E60 /* Ligne.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6969BD8E25F0DCD5008CB1AB /* StopItem */ = {
+			isa = PBXGroup;
+			children = (
+				6969BD8F25F0DD13008CB1AB /* StopItem.swift */,
+				6969BD9025F0DD13008CB1AB /* StopItem.xib */,
+			);
+			path = StopItem;
+			sourceTree = "<group>";
+		};
+		69A0D14925F24014001B365E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				69A0D14A25F24039001B365E /* NetworkService.swift */,
+				6919334725F63B3300339E08 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		69A0D15825F24590001B365E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6919335625F672E500339E08 /* Shared */,
+				69A0D14925F24014001B365E /* Services */,
+				69A0D15925F245A3001B365E /* Constants.swift */,
+				69AC2C4B25F263CF00994E60 /* BaseViewModel.swift */,
+				69AC2C5525F265F900994E60 /* BaseRepository.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		69E7B64925F1207B003F028E /* LineItem */ = {
+			isa = PBXGroup;
+			children = (
+				69E7B64A25F12094003F028E /* LineItem.swift */,
+				69E7B64B25F12094003F028E /* LineItem.xib */,
+			);
+			path = LineItem;
+			sourceTree = "<group>";
+		};
+		E6206A13255879493078E11E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3EDB42FD98AC1F4D0833EC4 /* Pods_etan.framework */,
+				19216EECE51FDCC7DC529860 /* Pods_etan_etanUITests.framework */,
+				125332ABAB46D0FC68C88458 /* Pods_etanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +389,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6939E7FB25F028BB003D4C83 /* Build configuration list for PBXNativeTarget "etan" */;
 			buildPhases = (
+				000848BFAEF6BAD164BE1AC5 /* [CP] Check Pods Manifest.lock */,
 				6939E7CD25F028B9003D4C83 /* Sources */,
 				6939E7CE25F028B9003D4C83 /* Frameworks */,
 				6939E7CF25F028B9003D4C83 /* Resources */,
+				12C5BF8B6F9286A5226791A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +408,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6939E7FE25F028BB003D4C83 /* Build configuration list for PBXNativeTarget "etanTests" */;
 			buildPhases = (
+				C1CAC984362DD47996D960E5 /* [CP] Check Pods Manifest.lock */,
 				6939E7E325F028BB003D4C83 /* Sources */,
 				6939E7E425F028BB003D4C83 /* Frameworks */,
 				6939E7E525F028BB003D4C83 /* Resources */,
@@ -170,9 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6939E80125F028BB003D4C83 /* Build configuration list for PBXNativeTarget "etanUITests" */;
 			buildPhases = (
+				1BC95B8DCDA27B49D123BF3B /* [CP] Check Pods Manifest.lock */,
 				6939E7EE25F028BB003D4C83 /* Sources */,
 				6939E7EF25F028BB003D4C83 /* Frameworks */,
 				6939E7F025F028BB003D4C83 /* Resources */,
+				C5AEB17F9F8DD4BA2FF3E04D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +490,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6939E82625F03D34003D4C83 /* LoadingViewController.xib in Resources */,
 				6939E7E125F028BA003D4C83 /* LaunchScreen.storyboard in Resources */,
+				693D086C25F13D4B00F3501E /* HoursViewController.xib in Resources */,
 				6939E7DE25F028BA003D4C83 /* Assets.xcassets in Resources */,
-				6939E7DC25F028B9003D4C83 /* Main.storyboard in Resources */,
+				6969BD8325F0C9CC008CB1AB /* StopDetailsViewController.xib in Resources */,
+				69E7B64D25F12094003F028E /* LineItem.xib in Resources */,
+				6969BD7025F045AF008CB1AB /* FavoritesViewController.xib in Resources */,
+				6969BD9225F0DD13008CB1AB /* StopItem.xib in Resources */,
+				693D088425F1418000F3501E /* HourItem.xib in Resources */,
+				6939E84225F03FC6003D4C83 /* StopsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +519,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		000848BFAEF6BAD164BE1AC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12C5BF8B6F9286A5226791A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etan/Pods-etan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etan/Pods-etan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-etan/Pods-etan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BC95B8DCDA27B49D123BF3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etan-etanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1CAC984362DD47996D960E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5AEB17F9F8DD4BA2FF3E04D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etan-etanUITests/Pods-etan-etanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-etan-etanUITests/Pods-etan-etanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-etan-etanUITests/Pods-etan-etanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6939E7CD25F028B9003D4C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6939E7D925F028B9003D4C83 /* ViewController.swift in Sources */,
+				693D08AC25F22FC500F3501E /* StopListViewModel.swift in Sources */,
+				6919334325F63A1B00339E08 /* etan.xcdatamodeld in Sources */,
+				69AC2C4C25F263CF00994E60 /* BaseViewModel.swift in Sources */,
+				6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */,
+				69A0D15A25F245A3001B365E /* Constants.swift in Sources */,
+				69AC2C6325F26EDE00994E60 /* HourListRepository.swift in Sources */,
+				6969BD9125F0DD13008CB1AB /* StopItem.swift in Sources */,
 				6939E7D525F028B9003D4C83 /* AppDelegate.swift in Sources */,
+				6919334825F63B3300339E08 /* StorageService.swift in Sources */,
+				6919335225F6686B00339E08 /* FavoritesListViewModel.swift in Sources */,
 				6939E7D725F028B9003D4C83 /* SceneDelegate.swift in Sources */,
+				69AC2C3925F2528A00994E60 /* Ligne.swift in Sources */,
+				6969BD7625F04AC0008CB1AB /* Stop.swift in Sources */,
+				6939E82525F03D34003D4C83 /* LoadingViewController.swift in Sources */,
+				6939E84125F03FC6003D4C83 /* StopsViewController.swift in Sources */,
+				693D08A725F22F5000F3501E /* Hour.swift in Sources */,
+				693D088325F1418000F3501E /* HourItem.swift in Sources */,
+				69E7B64C25F12094003F028E /* LineItem.swift in Sources */,
+				693D08A225F22DB100F3501E /* ColorCode.swift in Sources */,
+				6969BD8225F0C9CC008CB1AB /* StopDetailsViewController.swift in Sources */,
+				693D089D25F22D2B00F3501E /* LineType.swift in Sources */,
+				6919335825F672F000339E08 /* Dialog.swift in Sources */,
+				6969BD6F25F045AF008CB1AB /* FavoritesViewController.swift in Sources */,
+				69AC2C5625F265F900994E60 /* BaseRepository.swift in Sources */,
+				69A0D14B25F24039001B365E /* NetworkService.swift in Sources */,
+				693D086B25F13D4B00F3501E /* HoursViewController.swift in Sources */,
+				69AC2C5E25F26D5C00994E60 /* HoursViewModel.swift in Sources */,
+				69E5AF1A25F2365D00F4103E /* StopListRepository.swift in Sources */,
+				6969BD6525F0449E008CB1AB /* MainViewController.swift in Sources */,
+				69AC2C4725F263A500994E60 /* StopDetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +692,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6939E7DA25F028B9003D4C83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6939E7DB25F028B9003D4C83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6939E7DF25F028BA003D4C83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,6 +821,7 @@
 		};
 		6939E7FC25F028BB003D4C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55C20810FECCAC7BB56C6C1 /* Pods-etan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +840,7 @@
 		};
 		6939E7FD25F028BB003D4C83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F361A7A790B70BE4AEA952 /* Pods-etan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +859,7 @@
 		};
 		6939E7FF25F028BB003D4C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4C314DDB4EE0C29FD32416 /* Pods-etanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +881,7 @@
 		};
 		6939E80025F028BB003D4C83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD91933F9D604A1DBC55A06 /* Pods-etanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +903,7 @@
 		};
 		6939E80225F028BB003D4C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A161A2CF9CBAE3AE06BE523E /* Pods-etan-etanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +923,7 @@
 		};
 		6939E80325F028BB003D4C83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805E1DB9D2B3D8092D0375A5 /* Pods-etan-etanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +981,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6919334125F63A1B00339E08 /* etan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6919334225F63A1B00339E08 /* etan.xcdatamodel */,
+			);
+			currentVersion = 6919334225F63A1B00339E08 /* etan.xcdatamodel */;
+			path = etan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6939E7C925F028B9003D4C83 /* Project object */;
 }

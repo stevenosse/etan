@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Ligne: Codable {
+    let numLigne, directionSens1, directionSens2, accessible: String?
+    let etatTrafic: Int?
+}

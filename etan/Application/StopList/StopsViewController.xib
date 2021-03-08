@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StopsViewController" customModule="etan" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="psJ-DX-Qzg" id="9XB-1b-daw"/>
+                <outlet property="errorMessageLabel" destination="E5K-Nh-evC" id="CaE-Sf-d8b"/>
+                <outlet property="noDataLabel" destination="D7X-DB-CcU" id="ySs-n9-0wv"/>
                 <outlet property="searchBar" destination="kdv-1G-fSw" id="8dO-Rp-7G0"/>
                 <outlet property="stopsListView" destination="fOe-0I-Bkl" id="ol7-iD-pGg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,6 +23,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fOe-0I-Bkl">
+                    <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
                 <searchBar contentMode="redraw" placeholder="Rechercher un arrêt..." translatesAutoresizingMaskIntoConstraints="NO" id="kdv-1G-fSw">
                     <rect key="frame" x="0.0" y="44" width="414" height="55"/>
                     <constraints>
@@ -28,22 +35,40 @@
                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fOe-0I-Bkl">
-                    <rect key="frame" x="0.0" y="99" width="414" height="763"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-DX-Qzg">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5K-Nh-evC">
+                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucune donnée disponible." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-DB-CcU">
+                    <rect key="frame" x="104" y="437.5" width="206.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fOe-0I-Bkl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7N0-VD-JOE"/>
+                <constraint firstItem="psJ-DX-Qzg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ArO-OK-JXA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fOe-0I-Bkl" secondAttribute="trailing" id="BAj-ad-rmc"/>
                 <constraint firstItem="kdv-1G-fSw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Dmx-4S-6pk"/>
                 <constraint firstItem="kdv-1G-fSw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HgL-Jj-oe2"/>
+                <constraint firstItem="D7X-DB-CcU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JZ4-Eu-IyL"/>
                 <constraint firstItem="kdv-1G-fSw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NLF-kH-8IT"/>
                 <constraint firstItem="kdv-1G-fSw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nzm-Dj-qBi"/>
+                <constraint firstItem="E5K-Nh-evC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Wrt-0M-wNv"/>
+                <constraint firstItem="fOe-0I-Bkl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hu0-2G-94V"/>
+                <constraint firstItem="psJ-DX-Qzg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jbA-qh-feT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fOe-0I-Bkl" secondAttribute="bottom" id="lFl-vC-ZzL"/>
                 <constraint firstItem="fOe-0I-Bkl" firstAttribute="top" secondItem="kdv-1G-fSw" secondAttribute="bottom" id="nu4-du-7Ss"/>
+                <constraint firstItem="D7X-DB-CcU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rPc-8P-832"/>
+                <constraint firstItem="E5K-Nh-evC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="swP-Kf-uHG"/>
             </constraints>
             <point key="canvasLocation" x="489.85507246376818" y="-569.19642857142856"/>
         </view>

@@ -20,7 +20,7 @@ class MainViewController: UITabBarController {
         stopsViewController.tabBarItem.image = UIImage(systemName: "alt")
         stopsViewController.tabBarItem.title = "Arrêts"
         
-        let favoritesViewController = FavoritesViewController()
+        let favoritesViewController = UINavigationController(rootViewController: FavoritesViewController())
         favoritesViewController.tabBarItem.image = UIImage(systemName: "heart")
         favoritesViewController.tabBarItem.title = "Favoris"
         
