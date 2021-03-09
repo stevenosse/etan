@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		236CCFED602D0B695D71BFEC /* Pods_etanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125332ABAB46D0FC68C88458 /* Pods_etanTests.framework */; };
-		6919334325F63A1B00339E08 /* etan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6919334125F63A1B00339E08 /* etan.xcdatamodeld */; };
 		6919334825F63B3300339E08 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919334725F63B3300339E08 /* StorageService.swift */; };
 		6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919334C25F64DA400339E08 /* FavoriteListRepository.swift */; };
 		6919335225F6686B00339E08 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335125F6686B00339E08 /* FavoritesListViewModel.swift */; };
 		6919335825F672F000339E08 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919335725F672EF00339E08 /* Dialog.swift */; };
 		6919336225F6805400339E08 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919336125F6805400339E08 /* UIViewControllerExtension.swift */; };
+		6919336F25F767B700339E08 /* FavoriteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919336D25F767B700339E08 /* FavoriteMapViewController.swift */; };
+		6919337025F767B700339E08 /* FavoriteMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6919336E25F767B700339E08 /* FavoriteMapViewController.xib */; };
+		6919337825F7746F00339E08 /* StopCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919337725F7746F00339E08 /* StopCoords.swift */; };
+		6919337D25F7755400339E08 /* AppDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919337C25F7755400339E08 /* AppDataRepository.swift */; };
+		6919338225F7758B00339E08 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919338125F7758B00339E08 /* LoadingViewModel.swift */; };
+		6919338725F775EA00339E08 /* TanDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919338625F775EA00339E08 /* TanDataService.swift */; };
+		6919339725F77E9800339E08 /* etan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6919339525F77E9800339E08 /* etan.xcdatamodeld */; };
+		6919339F25F78D9800339E08 /* FavoriteMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919339E25F78D9800339E08 /* FavoriteMapViewModel.swift */; };
 		6939E7D525F028B9003D4C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D425F028B9003D4C83 /* AppDelegate.swift */; };
 		6939E7D725F028B9003D4C83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939E7D625F028B9003D4C83 /* SceneDelegate.swift */; };
 		6939E7DE25F028BA003D4C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6939E7DD25F028BA003D4C83 /* Assets.xcassets */; };
@@ -76,12 +83,19 @@
 		04F361A7A790B70BE4AEA952 /* Pods-etan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etan.release.xcconfig"; path = "Target Support Files/Pods-etan/Pods-etan.release.xcconfig"; sourceTree = "<group>"; };
 		125332ABAB46D0FC68C88458 /* Pods_etanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19216EECE51FDCC7DC529860 /* Pods_etan_etanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etan_etanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6919334225F63A1B00339E08 /* etan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = etan.xcdatamodel; sourceTree = "<group>"; };
 		6919334725F63B3300339E08 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		6919334C25F64DA400339E08 /* FavoriteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRepository.swift; sourceTree = "<group>"; };
 		6919335125F6686B00339E08 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		6919335725F672EF00339E08 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		6919336125F6805400339E08 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		6919336D25F767B700339E08 /* FavoriteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMapViewController.swift; sourceTree = "<group>"; };
+		6919336E25F767B700339E08 /* FavoriteMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMapViewController.xib; sourceTree = "<group>"; };
+		6919337725F7746F00339E08 /* StopCoords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopCoords.swift; sourceTree = "<group>"; };
+		6919337C25F7755400339E08 /* AppDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataRepository.swift; sourceTree = "<group>"; };
+		6919338125F7758B00339E08 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		6919338625F775EA00339E08 /* TanDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanDataService.swift; sourceTree = "<group>"; };
+		6919339625F77E9800339E08 /* etan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = etan.xcdatamodel; sourceTree = "<group>"; };
+		6919339E25F78D9800339E08 /* FavoriteMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMapViewModel.swift; sourceTree = "<group>"; };
 		6939E7D125F028B9003D4C83 /* etan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6939E7D425F028B9003D4C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6939E7D625F028B9003D4C83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +204,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		6919336C25F7678900339E08 /* FavoriteMap */ = {
+			isa = PBXGroup;
+			children = (
+				6919336D25F767B700339E08 /* FavoriteMapViewController.swift */,
+				6919336E25F767B700339E08 /* FavoriteMapViewController.xib */,
+				6919339E25F78D9800339E08 /* FavoriteMapViewModel.swift */,
+			);
+			path = FavoriteMap;
+			sourceTree = "<group>";
+		};
 		6939E7C825F028B9003D4C83 = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +246,7 @@
 				6939E7DD25F028BA003D4C83 /* Assets.xcassets */,
 				6939E7DF25F028BA003D4C83 /* LaunchScreen.storyboard */,
 				6939E7E225F028BA003D4C83 /* Info.plist */,
-				6919334125F63A1B00339E08 /* etan.xcdatamodeld */,
+				6919339525F77E9800339E08 /* etan.xcdatamodeld */,
 			);
 			path = etan;
 			sourceTree = "<group>";
@@ -266,6 +290,7 @@
 		693D088D25F22A6600F3501E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				6919336C25F7678900339E08 /* FavoriteMap */,
 				6939E82A25F03DB6003D4C83 /* Main */,
 				693D089225F22B0400F3501E /* LoadingView */,
 				693D089125F22AF300F3501E /* StopDetails */,
@@ -327,6 +352,8 @@
 			children = (
 				6939E82325F03D34003D4C83 /* LoadingViewController.swift */,
 				6939E82425F03D34003D4C83 /* LoadingViewController.xib */,
+				6919337C25F7755400339E08 /* AppDataRepository.swift */,
+				6919338125F7758B00339E08 /* LoadingViewModel.swift */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -339,6 +366,7 @@
 				693D08A125F22DB100F3501E /* ColorCode.swift */,
 				693D08A625F22F5000F3501E /* Hour.swift */,
 				69AC2C3825F2528A00994E60 /* Ligne.swift */,
+				6919337725F7746F00339E08 /* StopCoords.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,6 +385,7 @@
 			children = (
 				69A0D14A25F24039001B365E /* NetworkService.swift */,
 				6919334725F63B3300339E08 /* StorageService.swift */,
+				6919338625F775EA00339E08 /* TanDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -509,6 +538,7 @@
 				69E7B64D25F12094003F028E /* LineItem.xib in Resources */,
 				6969BD7025F045AF008CB1AB /* FavoritesViewController.xib in Resources */,
 				6969BD9225F0DD13008CB1AB /* StopItem.xib in Resources */,
+				6919337025F767B700339E08 /* FavoriteMapViewController.xib in Resources */,
 				693D088425F1418000F3501E /* HourItem.xib in Resources */,
 				6939E84225F03FC6003D4C83 /* StopsViewController.xib in Resources */,
 			);
@@ -639,14 +669,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				693D08AC25F22FC500F3501E /* StopListViewModel.swift in Sources */,
-				6919334325F63A1B00339E08 /* etan.xcdatamodeld in Sources */,
+				6919337825F7746F00339E08 /* StopCoords.swift in Sources */,
 				6919336225F6805400339E08 /* UIViewControllerExtension.swift in Sources */,
 				69AC2C4C25F263CF00994E60 /* BaseViewModel.swift in Sources */,
 				6919334D25F64DA400339E08 /* FavoriteListRepository.swift in Sources */,
 				69A0D15A25F245A3001B365E /* Constants.swift in Sources */,
 				69AC2C6325F26EDE00994E60 /* HourListRepository.swift in Sources */,
+				6919339F25F78D9800339E08 /* FavoriteMapViewModel.swift in Sources */,
 				6969BD9125F0DD13008CB1AB /* StopItem.swift in Sources */,
 				6939E7D525F028B9003D4C83 /* AppDelegate.swift in Sources */,
+				6919339725F77E9800339E08 /* etan.xcdatamodeld in Sources */,
 				6919334825F63B3300339E08 /* StorageService.swift in Sources */,
 				6919335225F6686B00339E08 /* FavoritesListViewModel.swift in Sources */,
 				6939E7D725F028B9003D4C83 /* SceneDelegate.swift in Sources */,
@@ -654,19 +686,23 @@
 				6969BD7625F04AC0008CB1AB /* Stop.swift in Sources */,
 				6939E82525F03D34003D4C83 /* LoadingViewController.swift in Sources */,
 				6939E84125F03FC6003D4C83 /* StopsViewController.swift in Sources */,
+				6919338225F7758B00339E08 /* LoadingViewModel.swift in Sources */,
 				693D08A725F22F5000F3501E /* Hour.swift in Sources */,
 				693D088325F1418000F3501E /* HourItem.swift in Sources */,
+				6919337D25F7755400339E08 /* AppDataRepository.swift in Sources */,
 				69E7B64C25F12094003F028E /* LineItem.swift in Sources */,
 				693D08A225F22DB100F3501E /* ColorCode.swift in Sources */,
 				6969BD8225F0C9CC008CB1AB /* StopDetailsViewController.swift in Sources */,
 				693D089D25F22D2B00F3501E /* LineType.swift in Sources */,
 				6919335825F672F000339E08 /* Dialog.swift in Sources */,
+				6919336F25F767B700339E08 /* FavoriteMapViewController.swift in Sources */,
 				6969BD6F25F045AF008CB1AB /* FavoritesViewController.swift in Sources */,
 				69AC2C5625F265F900994E60 /* BaseRepository.swift in Sources */,
 				69A0D14B25F24039001B365E /* NetworkService.swift in Sources */,
 				693D086B25F13D4B00F3501E /* HoursViewController.swift in Sources */,
 				69AC2C5E25F26D5C00994E60 /* HoursViewModel.swift in Sources */,
 				69E5AF1A25F2365D00F4103E /* StopListRepository.swift in Sources */,
+				6919338725F775EA00339E08 /* TanDataService.swift in Sources */,
 				6969BD6525F0449E008CB1AB /* MainViewController.swift in Sources */,
 				69AC2C4725F263A500994E60 /* StopDetailsViewModel.swift in Sources */,
 			);
@@ -995,14 +1031,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6919334125F63A1B00339E08 /* etan.xcdatamodeld */ = {
+		6919339525F77E9800339E08 /* etan.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6919334225F63A1B00339E08 /* etan.xcdatamodel */,
+				6919339625F77E9800339E08 /* etan.xcdatamodel */,
 			);
-			currentVersion = 6919334225F63A1B00339E08 /* etan.xcdatamodel */;
+			currentVersion = 6919339625F77E9800339E08 /* etan.xcdatamodel */;
 			path = etan.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

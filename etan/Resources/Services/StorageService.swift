@@ -36,13 +36,33 @@ class StorageService {
         }
     }
     
+    func executeQuery(entityName: String, predicate: NSPredicate) -> [Any] {
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: entityName)
+        request.predicate = predicate
+        
+        do {
+            let results = try managedContext.fetch(request)
+            return results
+        } catch {
+            let nserror = error as NSError
+            fatalError("An error occured : \(nserror)")
+        }
+        
+    }
+    
     func saveContext() {
-        if managedContext.hasChanges {
-            do {
-                try managedContext.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("An error occured : \(nserror)")
+        let privateMOC = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateMOC.parent = managedContext
+        
+        if privateMOC.hasChanges {
+            privateMOC.perform {
+                //operations
+                do {
+                    try privateMOC.save()
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("An error occured : \(nserror)")
+                }
             }
         }
     }

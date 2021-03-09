@@ -17,7 +17,7 @@ class NetworkService {
     static let shared = NetworkService(baseUrl: Constants.apiBaseUrl)
     
     // MARK: - Initialisation
-    private init(baseUrl: String) {
+    init(baseUrl: String) {
         self.baseUrl = baseUrl
     }
     

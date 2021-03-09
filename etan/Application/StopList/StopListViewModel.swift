@@ -55,11 +55,14 @@ class StopListViewModel : BaseViewModel {
             let match = favoriteList.first(where: { object in
                 return object.value(forKeyPath: "stopName") as? String == stop?.libelle
             })
-            if match != nil {
-                return false
-            }
+            if match != nil { return false }
             
-            favoriteRepository.saveFavorite(name: (stop?.libelle)!, latitude: 0.0, longitude: 0.0)
+            let stopDataResult = AppDataRepository.instance.getCoordinatesFor(code: (stop?.codeLieu)!).first
+            
+            let latitude: Double = stopDataResult?.value(forKeyPath: "latitude") as! Double
+            let longitude: Double = stopDataResult?.value(forKeyPath: "longitude") as! Double
+            
+            favoriteRepository.saveFavorite(name: (stop?.libelle)!, latitude: latitude, longitude: longitude, code: (stop?.codeLieu)!)
             return true
         }
         return false

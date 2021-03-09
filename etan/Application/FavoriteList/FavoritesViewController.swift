@@ -60,7 +60,8 @@ class FavoritesViewController: UIViewController {
     }
     
     @objc func showMapViewTapped() {
-        print("show map mfk")
+        let favoritesView = FavoriteMapViewController()
+        self.navigationController?.pushViewController(favoritesView, animated: true)
     }
     
     func fetchData() {

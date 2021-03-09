@@ -9,14 +9,30 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    lazy var viewModel: LoadingViewModel = {
+        return LoadingViewModel()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadingLabel.text = "Chargement..."
-        perform(#selector(navigateToMainScreen), with: nil, afterDelay: 0.5)
+        loadingLabel.text = "Initialisation de l'application. \nCette opération peut durer quelques minutes..."
+        activityIndicator.startAnimating()
+         initializeApplication()
+    }
+    
+    func initializeApplication() {
+        viewModel.initStopList() {
+            DispatchQueue.main.async { [self] in
+                self.activityIndicator.stopAnimating()
+                self.navigateToMainScreen()
+            }
+        }
     }
 
-    @objc func navigateToMainScreen() {
+    func navigateToMainScreen() {
         let mainViewController = MainViewController()
         mainViewController.modalPresentationStyle = .fullScreen
         present(mainViewController, animated: true)

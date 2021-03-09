@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController" customModule="etan" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="6iH-55-GS1" id="iPt-4a-kc5"/>
                 <outlet property="loadingLabel" destination="3pl-cY-Uxu" id="tLJ-6M-sua"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,18 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pl-cY-Uxu">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pl-cY-Uxu">
+                    <rect key="frame" x="0.0" y="154" width="414" height="698"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-55-GS1">
+                    <rect key="frame" x="197" y="54" width="20" height="798"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="3pl-cY-Uxu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6om-c2-6TI"/>
-                <constraint firstItem="3pl-cY-Uxu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hi0-nq-fPe"/>
+                <constraint firstItem="3pl-cY-Uxu" firstAttribute="top" secondItem="6iH-55-GS1" secondAttribute="top" constant="100" id="3C6-Q2-EA2"/>
+                <constraint firstItem="6iH-55-GS1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="4Qi-ch-mG2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="centerX" secondItem="3pl-cY-Uxu" secondAttribute="centerX" id="C0i-ia-wEX"/>
+                <constraint firstItem="6iH-55-GS1" firstAttribute="bottom" secondItem="3pl-cY-Uxu" secondAttribute="bottom" id="Nfc-S1-A9M"/>
+                <constraint firstItem="3pl-cY-Uxu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q7M-P4-w11"/>
+                <constraint firstItem="6iH-55-GS1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cDa-H7-1s6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3pl-cY-Uxu" secondAttribute="bottom" constant="10" id="jNW-CP-Gsy"/>
             </constraints>
             <point key="canvasLocation" x="14" y="97"/>
         </view>

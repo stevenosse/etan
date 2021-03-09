@@ -24,8 +24,8 @@ class StopsViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
 
         self.title = "Arrêts"
-        
         self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationItem.hidesSearchBarWhenScrolling = true
         
         self.errorMessageLabel.isHidden = true
         self.noDataLabel.isHidden = true
@@ -100,7 +100,6 @@ extension StopsViewController : UITableViewDelegate {
 
 // MARK: - Table view data source
 extension StopsViewController : UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: move this to it component
         let cell = Bundle.main.loadNibNamed("StopItem", owner: self, options: nil)?.first as! StopItem
@@ -150,6 +149,4 @@ extension StopsViewController : UITableViewDataSource {
         addToFavoritesAction.backgroundColor = .systemBlue
         return UISwipeActionsConfiguration(actions: [addToFavoritesAction])
     }
-    
-    
 }

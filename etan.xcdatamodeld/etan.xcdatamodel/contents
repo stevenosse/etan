@@ -12,7 +12,7 @@
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="StopData" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="StopData" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="Favorite" positionX="-209.40234375" positionY="46.46875" width="128" height="103"/>
     </elements>
 </model>
